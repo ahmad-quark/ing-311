@@ -92,6 +92,6 @@ jobs:
       - name: Upload to s3
         run: |
           curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-          unzip awscliv2.zip
+          unzip -qq awscliv2.zip
           sudo ./aws/install
           /usr/local/bin/aws s3 cp ${{ github.sha }} s3://hamed-temp/test/
