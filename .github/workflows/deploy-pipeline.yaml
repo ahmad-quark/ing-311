@@ -34,6 +34,7 @@ jobs:
         run: |
             cd function
             python -m pip install --upgrade pip
+            sudo apt install zip -y
             if [ -f requirements.txt ]; then pip install -r requirements.txt -t .; fi 
       - name: Zip bundle
         run: |
